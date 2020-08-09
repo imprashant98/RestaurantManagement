@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="672.0" prefWidth="557.0" scaleShape="false" style="-fx-background-color: White;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="RestaurantManagement.ReceiptController">
+    <children>
+        <TextArea fx:id="receiptMemo" editable="false" layoutY="225.0" mouseTransparent="true" prefHeight="367.0" prefWidth="557.0" style="-fx-background-color: White; -fx-border-color: White; -fx-border-width: 0px;" text="here">
+         <font>
+            <Font name="Kristen ITC" size="12.0" />
+         </font></TextArea>
+      <Label layoutX="35.0" layoutY="14.0" prefHeight="57.0" prefWidth="490.0" text="Fast Food Corner" textFill="#e10c0c">
+         <font>
+            <Font name="hooge 05_53" size="43.0" />
+         </font>
+      </Label>
+      <Label layoutX="72.0" layoutY="61.0" prefHeight="41.0" prefWidth="435.0" text="Janaki Chowk, opp. of Janaki Mandir">
+         <font>
+            <Font name="JetBrains Mono Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="146.0" layoutY="102.0" prefHeight="32.0" prefWidth="305.0" text=" Janakpurdham, Nepal">
+         <font>
+             <Font name="JetBrains Mono Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="dateTime" layoutX="5.0" layoutY="144.0" prefHeight="25.0" prefWidth="265.0" text="Date" />
+      <Label fx:id="DescLabel" layoutX="21.0" layoutY="207.0" prefHeight="17.0" prefWidth="82.0" text="Description">
+         <font>
+            <Font name="Kristen ITC" size="12.0" />
+         </font></Label>
+      <Label fx:id="costLabel" layoutX="146.0" layoutY="207.0" prefHeight="17.0" prefWidth="99.0" text="Cost">
+         <font>
+            <Font name="Kristen ITC" size="12.0" />
+         </font></Label>
+      <Label fx:id="qtyLabel" layoutX="262.0" layoutY="207.0" prefHeight="17.0" prefWidth="99.0" text="Quantity">
+         <font>
+            <Font name="Kristen ITC" size="12.0" />
+         </font></Label>
+      <Label fx:id="totalLabel" layoutX="429.0" layoutY="207.0" prefHeight="17.0" prefWidth="121.0" text="Total">
+          <font>
+              <Font name="Kristen ITC" size="12.0" />
+          </font></Label>
+        
+      <Label fx:id="amountLabel" layoutX="400.0" layoutY="600.0" prefHeight="51.0" prefWidth="147.0">
+         <font>
+            <Font name="JetBrains Mono Regular" size="36.0" />
+         </font></Label>
+      <ImageView fitHeight="51.0" fitWidth="214.0" layoutX="62.0" layoutY="604.0" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="@barcode.jpg" />
+        </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="245.0" layoutY="604.0" prefHeight="51.0" prefWidth="147.0" text="Amount">
+          <font>
+              <Font name="JetBrains Mono Bold" size="36.0" />
+          </font></Label>
+      <Button layoutX="9.0" layoutY="617.0" mnemonicParsing="false" onAction="#onBack" onMouseEntered="#entered" onMouseExited="#exited" prefHeight="29.0" prefWidth="40.0" style="-fx-background-color: Cyan;" text="&lt;-">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+    </children>
+</AnchorPane>

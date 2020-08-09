@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="registerLayout" prefHeight="640.0" prefWidth="606.0" scaleShape="false" stylesheets="@layoutTheme.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="RestaurantManagement.RegisterController">
+    <children>
+        <Pane id="registerPane" layoutX="-3.0" layoutY="-3.0" prefHeight="651.0" prefWidth="612.0" stylesheets="@layoutTheme.css">
+            <children>
+                <Label fx:id="lblName" layoutX="33.0" layoutY="219.0" prefHeight="17.0" prefWidth="70.0" text="Name" textFill="WHITE">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+                <Label fx:id="lblAddress" layoutX="33.0" layoutY="261.0" prefHeight="17.0" prefWidth="70.0" text="Address" textFill="WHITE">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+                <Label fx:id="lblContact" layoutX="33.0" layoutY="307.0" prefHeight="17.0" prefWidth="70.0" text="Contact" textFill="WHITE">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+                <Label fx:id="lblEmail" layoutX="33.0" layoutY="353.0" prefHeight="17.0" prefWidth="70.0" text="Email" textFill="WHITE">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+                <Label fx:id="lblUsername" layoutX="33.0" layoutY="399.0" prefHeight="27.0" prefWidth="158.0" text="Username" textFill="#9a0202">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Label>
+                <Label fx:id="lblPassword" layoutX="33.0" layoutY="442.0" prefHeight="27.0" prefWidth="158.0" text="Password" textFill="#9a0202">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Label>
+                <Label fx:id="lblConfirmPassword" layoutX="33.0" layoutY="486.0" prefHeight="27.0" prefWidth="158.0" text="Confirm Password" textFill="#9a0202">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="txtUsername" layoutX="257.0" layoutY="399.0" prefHeight="25.0" prefWidth="283.0" />
+                <TextField fx:id="txtEmail" layoutX="257.0" layoutY="353.0" prefHeight="25.0" prefWidth="283.0" />
+                <TextField fx:id="txtContact" layoutX="257.0" layoutY="307.0" prefHeight="25.0" prefWidth="283.0" />
+                <TextField fx:id="txtAddress" layoutX="257.0" layoutY="261.0" prefHeight="25.0" prefWidth="283.0" />
+                <TextField fx:id="txtName" layoutX="257.0" layoutY="219.0" prefHeight="25.0" prefWidth="283.0" />
+
+                <Button fx:id="registerButton" blendMode="LIGHTEN" layoutX="365.0" layoutY="551.0" mnemonicParsing="false" onAction="#onRegister" onMouseEntered="#entered" onMouseExited="#exited" prefHeight="41.0" prefWidth="129.0" style="-fx-background-color: Cyan;" stylesheets="@layoutTheme.css" text="Register">
+                    <font>
+                        <Font name="System Bold" size="24.0" />
+                    </font>
+                </Button>
+                <Button fx:id="clearButton" blendMode="SRC_ATOP" layoutX="78.0" layoutY="551.0" mnemonicParsing="false" onAction="#onClear" onMouseEntered="#entered" onMouseExited="#exited" prefHeight="41.0" prefWidth="129.0" style="-fx-background-color: Cyan;" stylesheets="@layoutTheme.css" text="Clear" textFill="RED">
+                    <font>
+                        <Font name="System Bold" size="24.0" />
+                    </font>
+                </Button>
+                <PasswordField fx:id="txtPassword" layoutX="257.0" layoutY="447.0" prefHeight="25.0" prefWidth="283.0" />
+                <PasswordField fx:id="txtConfirmPassword" layoutX="257.0" layoutY="491.0" prefHeight="25.0" prefWidth="283.0" />
+              <ImageView fitHeight="187.0" fitWidth="374.0" layoutX="245.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                  <Image url="@std.png" />
+              </ImageView>
+              <Button fx:id="backButton" blendMode="LIGHTEN" layoutX="494.0" layoutY="21.0" mnemonicParsing="false" onAction="#onBack" onMouseEntered="#entered" onMouseExited="#exited" prefHeight="36.0" prefWidth="92.0" style="-fx-background-color: Cyan;" stylesheets="@layoutTheme.css" text="Back" textFill="#ff3333">
+                  <font>
+                      <Font name="System Bold" size="24.0" />
+                  </font>
+              </Button>
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>
