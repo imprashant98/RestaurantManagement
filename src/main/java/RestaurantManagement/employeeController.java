@@ -33,7 +33,7 @@ public String E_post_selection;
 @FXML
 Label labelPost;
 @FXML
-ComboBox enterPost;
+ComboBox<String> enterPost;
 @FXML
 Pane employeeDetails;
 @FXML
@@ -113,7 +113,7 @@ public void onAdd(ActionEvent e) {
     String post = String.valueOf(enterPost.getValue());
     
     
-    if (DB.insertEmployee("employee", id, name,post, contact, address, email)) {
+    if (DB.insertEmployee("employee", id, name, post, contact, address, email)) {
         
         a.show();
     }
@@ -126,7 +126,7 @@ public void onAdd(ActionEvent e) {
         throwables.printStackTrace();
     }
     
-    //int counter = Integer.parseInt(employeeName.getText());
+  
     
     
 }
@@ -139,79 +139,55 @@ public void onDelete(ActionEvent e) {
         listE = DB.getEmployee();
         tableE.setItems(listE);
         employeeId.setText(String.valueOf(DB.count("EmployeeId", "employee")));
-        //labelName.setText(employeeName.getText());
+      
     } catch (SQLException throwables) {
         throwables.printStackTrace();
     }
-//      int counter = Integer.parseInt(employeeName.getText());
+
 
 }
 
-//
-//public void onEdit(ActionEvent e) {
-////        Stage stage1 = (Stage) ((Node) e.getSource()).getScene().getWindow();
-////        EmployeeStage = stage1;
-//
-//    E_id_selection = tableE.getSelectionModel().getSelectedItem().getId();
-//    E_name_selection = tableE.getSelectionModel().getSelectedItem().getName();
-//    E_address_selection = tableE.getSelectionModel().getSelectedItem().getAddress();
-//    E_contact_selection = tableE.getSelectionModel().getSelectedItem().getContact();
-//    E_email_selection = tableE.getSelectionModel().getSelectedItem().getEmail();
-//    E_post_selection = tableE.getSelectionModel().getSelectedItem().getPost();
-//
-//
-//    employeeId.setText(String.valueOf(E_id_selection));
-//    employeeName.setText(E_name_selection);
-//    employeeAddress.setText(E_address_selection);
-//    employeeContact.setText(E_contact_selection);
-//    employeeEmail.setText(E_email_selection);
-//    enterPost.setValue(E_post_selection);
-//
-//
-//
-//}
 
 public void onUpdate(ActionEvent event) {
     
     int id = Integer.parseInt(employeeId.getText());
+    
     String name = employeeName.getText();
-    String address = employeeAddress.toString();
+    String post = enterPost.getValue();
+    String address = employeeAddress.getText();
     String contact = employeeContact.getText();
     String email = employeeEmail.getText();
-    String post = String.valueOf(enterPost.getValue());
+    
     
     
     try {
         DB.employeeUpdate(id, name,post, address, contact, email);
+        new Alert(Alert.AlertType.INFORMATION, "Data are updated!!", ButtonType.OK).show();
+        listE = DB.getEmployee();
+        tableE.setItems(listE);
     } catch (SQLException ex) {
         ex.printStackTrace();
     }
-    loadData();
+
     
 }
 
-public void loadData() {
-    try {
-        listE = DB.getEmployee();
-        tableE.setItems(listE);
-    } catch (SQLException throwables) {
-        throwables.printStackTrace();
-    }
-    
-    
-}
 
 @Override
 public void initialize(URL url, ResourceBundle rb) {
     
+    
+    enterPost.getItems().addAll("Owner", "Branch Manager","Associate Manager","Cook","Waiter","Front Desk Officer","Security Officer","Cleaner");
+    
     employeeId.setText(String.valueOf(DB.count("EmployeeId", "employee")));
     
-    
+    labelId.setLabelFor(employeeId);
     labelName.setLabelFor(employeeName);
     labelAddress.setLabelFor(employeeAddress);
     labelContact.setLabelFor(employeeAddress);
     labelEmail.setLabelFor(employeeAddress);
     
+    idColumn.setCellValueFactory(new PropertyValueFactory<Employee, Integer>("id"));
     nameColumn.setCellValueFactory(new PropertyValueFactory<Employee, String>("name"));
     addressColumn.setCellValueFactory(new PropertyValueFactory<Employee, String>("address"));
     postColumn.setCellValueFactory(new PropertyValueFactory<Employee, String>("post"));
@@ -221,32 +197,32 @@ public void initialize(URL url, ResourceBundle rb) {
     
     try {
         listE = DB.getEmployee();
+        tableE.setItems(listE);
     } catch (SQLException throwables) {
         throwables.printStackTrace();
     }
     
-    tableE.setItems(listE);
+    
     
     
 }
 
-
 public void selectRow(MouseEvent mouseEvent) {
     E_id_selection = tableE.getSelectionModel().getSelectedItem().getId();
     E_name_selection = tableE.getSelectionModel().getSelectedItem().getName();
+    E_post_selection = tableE.getSelectionModel().getSelectedItem().getPost();
     E_address_selection = tableE.getSelectionModel().getSelectedItem().getAddress();
     E_contact_selection = tableE.getSelectionModel().getSelectedItem().getContact();
     E_email_selection = tableE.getSelectionModel().getSelectedItem().getEmail();
-    E_post_selection = tableE.getSelectionModel().getSelectedItem().getPost();
     
     
     employeeId.setText(String.valueOf(E_id_selection));
     employeeName.setText(E_name_selection);
+    enterPost.setValue(E_post_selection);
     employeeAddress.setText(E_address_selection);
     employeeContact.setText(E_contact_selection);
     employeeEmail.setText(E_email_selection);
-    enterPost.setValue(E_post_selection);
-    
+
 }
 }
 

@@ -228,9 +228,7 @@ public void onUpdate(ActionEvent e) {
 
 
 public void onReceipt(ActionEvent e) {
-    /*
-    first we select the table and get value in respective Fields then we extract the datas and try to print receipt for the valid table.
- */
+ 
     
     
     String tableNumber = selectTable.getValue();

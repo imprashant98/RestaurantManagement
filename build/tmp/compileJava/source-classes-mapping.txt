@@ -6,31 +6,31 @@ RestaurantManagement/Order.java
  RestaurantManagement.Order
 RestaurantManagement/Register.java
  RestaurantManagement.Register
-RestaurantManagement/LoginController.java
- RestaurantManagement.LoginController
+RestaurantManagement/StageManager.java
+ RestaurantManagement.StageManager
+ RestaurantManagement.StageManager$1
+ RestaurantManagement.StageManager$Singleton
 RestaurantManagement/Meals.java
  RestaurantManagement.Meals
-RestaurantManagement/OrderController.java
- RestaurantManagement.OrderController
+RestaurantManagement/Employee.java
+ RestaurantManagement.Employee
 RestaurantManagement/dataManager.java
  RestaurantManagement.dataManager
 RestaurantManagement/Drinks.java
  RestaurantManagement.Drinks
-RestaurantManagement/employeeController.java
- RestaurantManagement.employeeController
+RestaurantManagement/OrderController.java
+ RestaurantManagement.OrderController
+RestaurantManagement/LoginController.java
+ RestaurantManagement.LoginController
 RestaurantManagement/MainMenuController.java
  RestaurantManagement.MainMenuController
-RestaurantManagement/Employee.java
- RestaurantManagement.Employee
 RestaurantManagement/RegisterController.java
  RestaurantManagement.RegisterController
 RestaurantManagement/ReceiptController.java
  RestaurantManagement.ReceiptController
 RestaurantManagement/DB.java
  RestaurantManagement.DB
-RestaurantManagement/StageManager.java
- RestaurantManagement.StageManager
- RestaurantManagement.StageManager$1
- RestaurantManagement.StageManager$Singleton
 RestaurantManagement/EditController.java
  RestaurantManagement.EditController
+RestaurantManagement/employeeController.java
+ RestaurantManagement.employeeController

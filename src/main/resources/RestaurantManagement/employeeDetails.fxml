@@ -57,7 +57,7 @@
                      </font>
                   </Label>
                   <TextField fx:id="employeeId" layoutX="152.0" layoutY="18.0" prefHeight="25.0" prefWidth="205.0" />
-                  <Label fx:id="labelPost" layoutX="14.0" layoutY="117.0" prefHeight="25.0" prefWidth="85.0" style="-fx-alignment: Centre;" text="Designation" textFill="WHITE">
+                  <Label fx:id="labelPost" layoutX="14.0" layoutY="117.0" prefHeight="25.0" prefWidth="85.0"  text="Designation" textFill="WHITE">
                      <font>
                         <Font size="16.0" />
                      </font>

@@ -32,6 +32,7 @@
 #tableview{
 
     -fx-background-color: #884781;
+
 }
 #editpane{
 
@@ -44,6 +45,10 @@
 #registerLayout{
 -fx-background-color:#002D2D;
 
+}
+
+#rowHeading {
+  -fx-alignment: CENTER_LEFT;
 }
 
 .root{
@@ -63,6 +68,7 @@
     -fx-border-color: #005797;
     -fx-border-width: 0px 0px 1px 0px ;
     -fx-border-style: solid;
+
 }
 .table-view:row-selection .column-header-background .filler{
     -fx-background-color:#FFFFFF;
@@ -76,13 +82,18 @@
     -fx-text-fill: #005797;
     -fx-font-weight:bold;
     -fx-font-size:16px;
+    -fx-text-alignment:LEFT;
+
 
 }
 
 .table-view .column-header {
     -fx-background-color: transparent;
     -fx-pref-height:50px;
-    -fx-alignment: CENTER;
+    -fx-text-alignment:LEFT ;
+}
+.table-view .column-header .label {
+   -fx-alignment:CENTER_LEFT;
 }
 .table-view  .table-column{
     -fx-padding: 18 0 0 10;
@@ -109,7 +120,7 @@
     -fx-pref-height:40px;
     -fx-border-width: 0px 0px 1px 0px ;
     -fx-border-color:Violet;
-    -fx-text-alignment: CENTER;
+    -fx-text-alignment:LEFT ;
 }
 
 .table-view .table-row-cell:hover {
@@ -128,11 +139,12 @@
      -fx-border-color:#4a6358;
 }
 
-.table-view:row-selection {
+
+
+.table-view :row-selection {
     -fx-background-color: transparent;
     -fx-text-fill: white;
     -fx-fixed-cell-size: 50;
     -fx-alignment: CENTER;
-    -fx-text-alignment: center;
 
 }

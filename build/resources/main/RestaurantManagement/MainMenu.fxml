@@ -40,11 +40,11 @@
                     <font>
                         <Font size="20.0" />
                     </font></Button>
-            <Button layoutX="37.0" layoutY="73.0" mnemonicParsing="false" onAction="#onHome" onMouseEntered="#entered" onMouseExited="#exited" prefHeight="44.0" prefWidth="176.0" style="-fx-background-color: skyblue;" text="Home">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Button>
+                <Button layoutX="37.0" layoutY="73.0" mnemonicParsing="false" onAction="#onHome" onMouseEntered="#entered" onMouseExited="#exited" prefHeight="44.0" prefWidth="176.0" style="-fx-background-color: skyblue;" text="Home">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </Button>
             </children>
         </Pane>
         <VBox id="statistics" alignment="TOP_CENTER" layoutX="251.0" prefHeight="90.0" prefWidth="673.0" stylesheets="@layoutTheme.css" AnchorPane.leftAnchor="251.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -167,7 +167,7 @@
                 <Line endX="418.5" endY="0.5000076293945312" layoutX="317.0" layoutY="-2.0" startX="-90.5" startY="0.5" />
             </children>
         </Pane>
-        <Line endX="352.49993896484375" endY="0.5000076293945312" layoutX="565.0" layoutY="588.0" startX="-113.79995727539062" startY="0.5000076293945312" />
+        <Line endX="421.70709228515625" endY="0.7928466796875" layoutX="565.0" layoutY="588.0" startX="-89.20709228515625" startY="0.7928466796875" />
         <Pane id="Meals" fx:id="Drinks" layoutX="250.0" layoutY="89.0" prefHeight="501.0" prefWidth="736.0" stylesheets="@layoutTheme.css">
             <children>
                 <Pane id="mmid" layoutY="57.0" prefHeight="139.0" prefWidth="211.0" stylesheets="@layoutTheme.css">
@@ -199,19 +199,18 @@
                         <TextField fx:id="numD" editable="false" layoutX="95.0" layoutY="9.0" prefHeight="25.0" prefWidth="103.0" />
                     </children>
                 </Pane>
-                <TableView id="tableview" fx:id="tableD" layoutX="227.0" layoutY="1.0" prefHeight="500.0" prefWidth="514.0" stylesheets="@layoutTheme.css">
+                <TableView id="tableview" fx:id="tableD" layoutX="227.0" layoutY="1.0" prefHeight="500.0" prefWidth="510.0" stylesheets="@layoutTheme.css">
                     <columns>
-                        <TableColumn fx:id="numCD" prefWidth="75.0" text="Drinks Id" />
-                        <TableColumn fx:id="nameCD" prefWidth="75.0" text="Drinks Name" />
-                        <TableColumn fx:id="typeCD" prefWidth="75.0" text="Drinks Type" />
-                        <TableColumn fx:id="costCD" prefWidth="75.0" text="Drinks Price" />
+                        <TableColumn fx:id="numCD" prefWidth="92.0" resizable="false"  text="Drinks Id" />
+                        <TableColumn fx:id="nameCD" prefWidth="129.0" resizable="false" text="Drinks Name" />
+                        <TableColumn fx:id="typeCD" prefWidth="128.0" resizable="false" text="Drinks Type" />
+                        <TableColumn fx:id="costCD" minWidth="0.0" prefWidth="160.0" text="Drinks Price" />
                     </columns>
                     <columnResizePolicy>
                         <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                     </columnResizePolicy>
                 </TableView>
                 <Line endX="99.99996948242188" endY="340.99993896484375" layoutX="126.0" layoutY="159.0" startX="99.99996948242188" startY="-158.0" />
-                <Line endX="99.99996948242188" endY="340.99993896484375" layoutX="635.0" layoutY="152.0" startX="99.99996948242188" startY="-158.0" />
                 <Button layoutX="14.0" layoutY="237.0" onAction="#addDrinks" onMouseEntered="#entered" onMouseExited="#exited" prefHeight="44.0" prefWidth="201.0" style="-fx-background-color: Cyan;" text="Add Drinks">
                     <font>
                         <Font name="Consolas Bold" size="20.0" />
@@ -232,7 +231,8 @@
                         <Font name="Consolas Bold" size="20.0" />
                     </font>
                 </Button>
-              <Line endX="400.5" endY="9.49993896484375" layoutX="-174.0" layoutY="491.0" startX="910.0" startY="10.0" />
+                <Line endX="400.5" endY="9.49993896484375" layoutX="-174.0" layoutY="491.0" startX="910.0" startY="10.0" />
+                <Line endX="99.99996948242188" endY="340.99993896484375" layoutX="634.0" layoutY="156.0" startX="99.99996948242188" startY="-158.0" />
             </children>
         </Pane>
     </children>

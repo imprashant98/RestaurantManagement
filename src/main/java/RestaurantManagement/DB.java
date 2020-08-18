@@ -241,8 +241,6 @@ public static ObservableList<Order> getOrder() throws SQLException {
         String orderType = result.getString("menuType");
         
         String orderQuantity = result.getString("menuQuantity");
-//        long asDate = Long.parseLong(result.getString("menuDate"));
-//        LocalDate orderDate = LocalDate.ofEpochDay(asDate);
         java.sql.Date orderDate = Date.valueOf(result.getString("menuDate"));
         orderList.add(new Order(id, tableNumber, orderName, orderType, orderQuantity, orderDate));
     }
@@ -271,11 +269,10 @@ public static boolean mainUpdate(String table, int id, String name, String type,
 public static boolean employeeUpdate(int id, String name, String post, String contact, String address, String email) throws SQLException {
     Connection con = getConnection();
     Statement s = con.createStatement();
-    
+ 
     String sqlSelect = "UPDATE employee SET Ename = '" + name +
-                               "' ,Epost = '" + post + "', Eaddress = '" + address + "' ,Econtact = '" + contact + "' ,Eemail = '" + email + "' where EmployeeId=" + id + ";";
-    
-    
+                               "', Epost = '" + post + "', Eaddress = '" + address + "' ,Econtact = '" + contact + "' ,Eemail = '" + email + "' WHERE EmployeeId='" + id + "';";
+ 
     s.executeUpdate(sqlSelect);
     return true;
 }

@@ -4,18 +4,18 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="592.0" prefWidth="1174.0" scaleShape="false" stylesheets="@layoutTheme.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="RestaurantManagement.employeeController">
+<AnchorPane id="AnchorPane" prefHeight="592.0" prefWidth="1206.0" scaleShape="false" stylesheets="@layoutTheme.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="RestaurantManagement.employeeController">
     <children>
         <Pane id="slideLeft" layoutY="-3.0" prefHeight="598.0" prefWidth="1059.0" AnchorPane.bottomAnchor="-3.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-3.0">
             <children>
-                <TableView id="tableview" fx:id="tableE" layoutX="448.0" layoutY="66.0" onMouseClicked="#selectRow" prefHeight="500.0" prefWidth="720.0" stylesheets="@layoutTheme.css">
+                <TableView id="tableview" fx:id="tableE" layoutX="448.0" layoutY="66.0" onMouseClicked="#selectRow" prefHeight="500.0" prefWidth="758.0" stylesheets="@layoutTheme.css">
                     <columns>
                         <TableColumn fx:id="idColumn" prefWidth="85.0" text="Employee Id" />
                         <TableColumn fx:id="nameColumn" prefWidth="137.0" text="Name" />
                   <TableColumn fx:id="postColumn" prefWidth="75.0" text="Designation" />
                         <TableColumn fx:id="addressColumn" prefWidth="75.0" text="Address" />
-                        <TableColumn fx:id="contactColumn" prefWidth="101.0" text="Contact " />
-                        <TableColumn fx:id="emailColumn" prefWidth="138.0" text="e-Mail " />
+                        <TableColumn fx:id="contactColumn" prefWidth="111.0" resizable="false" text="Contact " />
+                        <TableColumn fx:id="emailColumn" prefWidth="142.0" resizable="false" text="e-Mail " />
                     </columns>
                     <columnResizePolicy>
                         <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
@@ -57,7 +57,7 @@
                      </font>
                   </Label>
                   <TextField fx:id="employeeId" layoutX="152.0" layoutY="18.0" prefHeight="25.0" prefWidth="205.0" />
-                  <Label fx:id="labelPost" layoutX="14.0" layoutY="117.0" prefHeight="25.0" prefWidth="85.0" style="-fx-alignment: Centre;" text="Designation" textFill="WHITE">
+                  <Label fx:id="labelPost" layoutX="14.0" layoutY="117.0" prefHeight="25.0" prefWidth="85.0"  text="Designation" textFill="WHITE">
                      <font>
                         <Font size="16.0" />
                      </font>
@@ -82,7 +82,7 @@
                         <Font name="Consolas Bold" size="25.0" />
                     </font>
                 </Button>
-                <Button layoutX="996.0" layoutY="14.0" mnemonicParsing="false" onAction="#onHome" onMouseEntered="#entered" onMouseExited="#exited" prefHeight="42.0" prefWidth="76.0" text="Home" textFill="#810af5">
+                <Button layoutX="1116.0" layoutY="14.0" mnemonicParsing="false" onAction="#onHome" onMouseEntered="#entered" onMouseExited="#exited" prefHeight="42.0" prefWidth="76.0" style="-fx-background-color: Cyan;" text="Home" textFill="#810af5">
                     <font>
                         <Font name="Times New Roman Bold" size="17.0" />
                     </font>
