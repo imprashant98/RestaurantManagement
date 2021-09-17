@@ -18,13 +18,13 @@
                 <Font name="Roboto" size="25.0" />
             </font>
         </Label>
-        <TextField fx:id="username" layoutX="237.0" layoutY="300.0" prefHeight="26.0" prefWidth="277.0" promptText="Username" stylesheets="@layoutTheme.css" />
+        <TextField fx:id="username" layoutX="237.0" layoutY="304.0" prefHeight="36.0" prefWidth="277.0" promptText="Username" stylesheets="@layoutTheme.css" />
         <Label layoutX="78.0" layoutY="357.0" text="Password:" textFill="WHITE">
             <font>
                 <Font name="Roboto" size="25.0" />
             </font>
         </Label>
-        <PasswordField fx:id="password" layoutX="237.0" layoutY="357.0" prefHeight="26.0" prefWidth="277.0" promptText="Password" stylesheets="@layoutTheme.css" />
+        <PasswordField fx:id="password" layoutX="237.0" layoutY="362.0" prefHeight="36.0" prefWidth="277.0" promptText="Password" stylesheets="@layoutTheme.css" />
         <Button fx:id="loginBtn" defaultButton="true" layoutX="133.0" layoutY="451.0" onAction="#login" onMouseEntered="#entered" onMouseExited="#exited" prefHeight="56.0" prefWidth="182.0" text="Login">
             <font>
                 <Font name="Times New Roman Bold" size="25.0" />
@@ -35,7 +35,7 @@
                 <Font name="Times New Roman Bold" size="25.0" />
             </font>
         </Button>
-      <Hyperlink fx:id="signup" layoutX="237.0" layoutY="402.0" onAction="#signup" prefHeight="28.0" prefWidth="316.0" style="-fx-text-fill: #0645AD;" text="Don't Have and Account? Signup" textFill="WHITE">
+      <Hyperlink fx:id="signup" layoutX="237.0" layoutY="409.0" onAction="#signup" prefHeight="28.0" prefWidth="316.0" style="-fx-text-fill: #0645AD;" text="Don't Have and Account? Signup" textFill="WHITE">
         <font>
             <Font name="Times New Roman" size="16.0" />
         </font>
