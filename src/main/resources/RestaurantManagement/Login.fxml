@@ -6,36 +6,36 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane id="loginLayout" prefHeight="542.0" prefWidth="652.0" stylesheets="@layoutTheme.css" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="RestaurantManagement.LoginController">
+<AnchorPane id="loginLayout" prefHeight="856.0" prefWidth="698.0" stylesheets="@layoutTheme.css" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="RestaurantManagement.LoginController">
     <children>
-        <ImageView fitHeight="266.0" fitWidth="250.0" layoutX="204.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="381.0" fitWidth="398.0" layoutX="178.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@std.png" />
             </image>
         </ImageView>
-        <Label layoutX="78.0" layoutY="299.0" prefHeight="36.0" prefWidth="122.0" text="Username:" textFill="#f0f0f0">
+        <Label layoutX="68.0" layoutY="462.0" prefHeight="36.0" prefWidth="122.0" text="Username:" textFill="#f0f0f0">
             <font>
                 <Font name="Roboto" size="25.0" />
             </font>
         </Label>
-        <TextField fx:id="username" layoutX="237.0" layoutY="304.0" prefHeight="36.0" prefWidth="277.0" promptText="Username" stylesheets="@layoutTheme.css" />
-        <Label layoutX="78.0" layoutY="357.0" text="Password:" textFill="WHITE">
+        <TextField fx:id="username" layoutX="237.0" layoutY="452.0" prefHeight="56.0" prefWidth="365.0" promptText="Username" stylesheets="@layoutTheme.css" />
+        <Label layoutX="68.0" layoutY="582.0" text="Password:" textFill="WHITE">
             <font>
                 <Font name="Roboto" size="25.0" />
             </font>
         </Label>
-        <PasswordField fx:id="password" layoutX="237.0" layoutY="362.0" prefHeight="36.0" prefWidth="277.0" promptText="Password" stylesheets="@layoutTheme.css" />
-        <Button fx:id="loginBtn" defaultButton="true" layoutX="133.0" layoutY="451.0" onAction="#login" onMouseEntered="#entered" onMouseExited="#exited" prefHeight="56.0" prefWidth="182.0" text="Login">
+        <PasswordField fx:id="password" layoutX="237.0" layoutY="572.0" prefHeight="56.0" prefWidth="365.0" promptText="Password" stylesheets="@layoutTheme.css" />
+        <Button fx:id="loginBtn" defaultButton="true" layoutX="146.0" layoutY="754.0" onAction="#login" onMouseEntered="#entered" onMouseExited="#exited" prefHeight="56.0" prefWidth="182.0" text="Login">
             <font>
                 <Font name="Times New Roman Bold" size="25.0" />
             </font>
         </Button>
-        <Button cancelButton="true" layoutX="382.0" layoutY="451.0" onAction="#exit" onMouseEntered="#entered" onMouseExited="#exited" prefHeight="56.0" prefWidth="182.0" text="Cancel">
+        <Button cancelButton="true" layoutX="435.0" layoutY="754.0" onAction="#exit" onMouseEntered="#entered" onMouseExited="#exited" prefHeight="56.0" prefWidth="182.0" text="Home">
             <font>
                 <Font name="Times New Roman Bold" size="25.0" />
             </font>
         </Button>
-      <Hyperlink fx:id="signup" layoutX="237.0" layoutY="409.0" onAction="#signup" prefHeight="28.0" prefWidth="316.0" style="-fx-text-fill: #0645AD;" text="Don't Have and Account? Signup" textFill="WHITE">
+      <Hyperlink fx:id="signup" layoutX="237.0" layoutY="664.0" onAction="#signup" prefHeight="28.0" prefWidth="316.0" style="-fx-text-fill: #0645AD;" text="Don't Have and Account? Signup" textFill="WHITE">
         <font>
             <Font name="Times New Roman" size="16.0" />
         </font>

@@ -252,16 +252,15 @@ public static ObservableList<Order> getOrder() throws SQLException {
 public static boolean mainUpdate(String table, int id, String name, String type, String cost) throws SQLException {
     Connection con = getConnection();
     Statement s = con.createStatement();
-    String sqlSelect = null;
+
     if (table.equals("drinks")) {
-        sqlSelect = "UPDATE drinks SET Dname = '" + name + "' , Dtype = '" + type + "',Dcost = " + cost + " where Did=" + id + ";";
+       String sqlSelect = "UPDATE drinks SET Dname = '" + name + "' , Dtype = '" + type + "',Dcost = " + cost + " where Did=" + id + ";";
+        s.executeUpdate(sqlSelect);
     } else {
-        sqlSelect = "UPDATE meals SET Mname = '" + name + "' , Mtype = '" + type + "',Mcost = " + cost + " where Mid=" + id + ";";
+       String sqlSelect = "UPDATE meals SET Mname = '" + name + "' , Mtype = '" + type + "',Mcost = " + cost + " where Mid=" + id + ";";
+        s.executeUpdate(sqlSelect);
         
     }
-    
-    
-    s.executeUpdate(sqlSelect);
     return true;
 }
 

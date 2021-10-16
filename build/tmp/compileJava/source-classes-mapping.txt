@@ -32,5 +32,3 @@ RestaurantManagement/StageManager.java
  RestaurantManagement.StageManager
  RestaurantManagement.StageManager$1
  RestaurantManagement.StageManager$Singleton
-RestaurantManagement/EditController.java
- RestaurantManagement.EditController

@@ -131,7 +131,7 @@
                         <TextField fx:id="numM" editable="false" layoutX="95.0" layoutY="9.0" opacity="0.75" prefHeight="25.0" prefWidth="103.0" />
                     </children>
                 </Pane>
-                <TableView id="tableview" fx:id="tableM" layoutX="227.0" layoutY="3.0" prefHeight="500.0" prefWidth="514.0" stylesheets="@layoutTheme.css">
+                <TableView id="tableview" fx:id="tableM" onMouseClicked="#onMouseClickedMeals" layoutX="227.0" layoutY="3.0" prefHeight="500.0" prefWidth="514.0" stylesheets="@layoutTheme.css">
                     <columns>
                         <TableColumn fx:id="numCM" prefWidth="75.0" text="Meals Id" />
                         <TableColumn fx:id="nameCM" prefWidth="75.0" text="Meals Name" />
@@ -149,7 +149,7 @@
                         <Font name="Consolas Bold" size="20.0" />
                     </font>
                 </Button>
-                <Button layoutX="13.0" layoutY="285.0" onAction="#onEdit" onMouseEntered="#entered" onMouseExited="#exited" prefHeight="44.0" prefWidth="201.0" text="Edit Meals">
+                <Button  fx:id="editMeals" layoutX="13.0" layoutY="285.0" onAction="#onEdit" onMouseEntered="#entered" onMouseExited="#exited" prefHeight="44.0" prefWidth="201.0" text="Update Meals">
                     <font>
                         <Font name="Consolas Bold" size="20.0" />
                     </font>
@@ -199,7 +199,7 @@
                         <TextField fx:id="numD" editable="false" layoutX="95.0" layoutY="9.0" prefHeight="25.0" prefWidth="103.0" />
                     </children>
                 </Pane>
-                <TableView id="tableview" fx:id="tableD" layoutX="227.0" layoutY="1.0" prefHeight="500.0" prefWidth="510.0" stylesheets="@layoutTheme.css">
+                <TableView id="tableview" fx:id="tableD" layoutX="227.0" onMouseClicked="#onMouseClickedDrinks" layoutY="1.0" prefHeight="500.0" prefWidth="510.0" stylesheets="@layoutTheme.css">
                     <columns>
                         <TableColumn fx:id="numCD" prefWidth="92.0" resizable="false"  text="Drinks Id" />
                         <TableColumn fx:id="nameCD" prefWidth="129.0" resizable="false" text="Drinks Name" />
@@ -211,12 +211,16 @@
                     </columnResizePolicy>
                 </TableView>
                 <Line endX="99.99996948242188" endY="340.99993896484375" layoutX="126.0" layoutY="159.0" startX="99.99996948242188" startY="-158.0" />
-                <Button layoutX="14.0" layoutY="237.0" onAction="#addDrinks" onMouseEntered="#entered" onMouseExited="#exited" prefHeight="44.0" prefWidth="201.0" style="-fx-background-color: Cyan;" text="Add Drinks">
+                <Button layoutX="14.0" layoutY="237.0" onAction="#addDrinks" onMouseEntered="#entered"
+                        onMouseExited="#exited" prefHeight="44.0" prefWidth="201.0" style="-fx-background-color: Cyan;"
+                        text="Add Drinks">
                     <font>
                         <Font name="Consolas Bold" size="20.0" />
                     </font>
                 </Button>
-                <Button layoutX="14.0" layoutY="287.0" onAction="#onEdit" onMouseEntered="#entered" onMouseExited="#exited" prefHeight="44.0" prefWidth="201.0" style="-fx-background-color: Cyan;" text="Edit Drinks">
+                <Button fx:id="editDrinks"   layoutX="14.0" layoutY="287.0" onAction="#onEdit" onMouseEntered="#entered"
+                        onMouseExited="#exited" prefHeight="44.0" prefWidth="201.0" style="-fx-background-color: Cyan;"
+                        text="Update Drinks">
                     <font>
                         <Font name="Consolas Bold" size="20.0" />
                     </font>

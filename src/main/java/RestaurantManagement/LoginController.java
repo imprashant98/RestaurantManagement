@@ -66,16 +66,7 @@ public void exited(MouseEvent e) {
             }
         }
 
-//        if (username.getText().equals("admin") && password.getText().equals("Prashant")) {
-//            username.clear();
-//            password.clear();
-//            StageManager.getInstance().loginStage.hide();
-//            StageManager.getInstance().mainStage.show();
-//
-//        }
-//        else {
-//            new Alert(Alert.AlertType.ERROR, "Login failed!", ButtonType.OK).show();
-//        }
+
 
     }
     public  void signup(ActionEvent e)
@@ -86,7 +77,8 @@ public void exited(MouseEvent e) {
 
     @FXML
     public void exit(ActionEvent e) {
-        Platform.exit();
+        StageManager.getInstance().loginStage.hide();
+        StageManager.getInstance().homeStage.show();
     }
 
 }

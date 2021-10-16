@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="RestaurantManagement:jar2">
+    <output-path>$PROJECT_DIR$/out/artifacts/RestaurantManagement_jar2</output-path>
+    <root id="archive" name="RestaurantManagement.jar">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="artifact" artifact-name="RestaurantManagement:jar" />
+    </root>
+  </artifact>
+</component>

@@ -161,7 +161,7 @@ public void onUpdate(ActionEvent event) {
     
     
     try {
-        DB.employeeUpdate(id, name,post, address, contact, email);
+        DB.employeeUpdate(id, name, post, contact, address, email);
         new Alert(Alert.AlertType.INFORMATION, "Data are updated!!", ButtonType.OK).show();
         listE = DB.getEmployee();
         tableE.setItems(listE);

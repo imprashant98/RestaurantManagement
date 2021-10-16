@@ -19,7 +19,7 @@ public Stage loginStage;
 public Stage mainStage;
 public Stage receiptStage;
 public Stage employeeStage;
-public Stage editStage;
+
 public Stage registerStage;
 public Stage homeStage;
 public Stage orderStage;
@@ -33,7 +33,7 @@ private StageManager() {
     createHomeStage();
     createMainStage();
     createEmployeeStage();
-    createEditStage();
+
     createRegisterStage();
     createOrderStage();
     
@@ -106,19 +106,7 @@ private void createRegisterStage() {
     }
 }
 
-private void createEditStage() {
-    editStage = new Stage();
-    try {
-        Parent root = load(getClass().getResource("Edit.fxml"));
-        Scene scene = new Scene(root);
-        editStage.setScene(scene);
-        editStage.centerOnScreen();
-       editStage.initStyle(StageStyle.UNDECORATED);
-       editStage.setResizable(false);
-    } catch (IOException e) {
-        e.printStackTrace();
-    }
-}
+
 
 public void createMainStage() {
     mainStage = new Stage();
